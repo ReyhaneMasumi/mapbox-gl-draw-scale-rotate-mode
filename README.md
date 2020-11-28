@@ -65,6 +65,10 @@ draw.changeMode('scaleRotateMode', {
 
 ## [Example](https://github.com/ReyhaneMasumi/mapbox-gl-draw-scale-rotate-mode/blob/main/demo/src/App.js)
 
+## Acknowledgement
+
+This project is heavily inspired from [TxRectMode mapbox-gl-draw custom mode](https://github.com/drykovanov/mapbox-gl-draw-rotate-scale-rect-mode).
+
 ## License
 
 MIT © [ReyhaneMasumi](LICENSE)
