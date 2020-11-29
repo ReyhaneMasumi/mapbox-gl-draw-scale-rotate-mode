@@ -27,7 +27,7 @@ or use CDN:
 ```js
 import mapboxGl from 'mapbox-gl';
 import MapboxDraw from '@mapbox/mapbox-gl-draw';
-import { SRMode, SRCenter } from 'mapbox-gl-draw-scale-rotate-mode';
+import { SRMode, SRCenter, SRStyle } from 'mapbox-gl-draw-scale-rotate-mode';
 
 const map = new mapboxgl.Map({
   container: 'map', // container id
@@ -39,6 +39,7 @@ const map = new mapboxgl.Map({
 const draw = new MapboxDraw({
   userProperties: true,
   displayControlsDefault: false,
+  styles: SRStyle,
   modes: Object.assign(MapboxDraw.modes, {
     scaleRotateMode: SRMode,
   }),
@@ -47,8 +48,6 @@ map.addControl(draw);
 
 // when mode drawing should be activated
 draw.changeMode('scaleRotateMode', {
-  featureId: draw.getSelected().features[0].id, // required
-
   canScale: true,
   canRotate: true, // only rotation enabled
   canTrash: false, // disable feature delete
