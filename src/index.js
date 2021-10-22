@@ -13,8 +13,8 @@ import destination from '@turf/destination';
 import transformRotate from '@turf/transform-rotate';
 import transformScale from '@turf/transform-scale';
 
-var rotate = require('./img/rotate.png');
-var scale = require('./img/scale.png');
+var rotate = new URL('./img/rotate.png', import.meta.url);
+var scale = new URL('./img/scale.png', import.meta.url);
 
 export const SRMode = {}; //scale rotate mode
 
